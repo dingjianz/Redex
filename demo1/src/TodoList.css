@@ -1,0 +1,13 @@
+.list-item {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+.list-item span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.ant-list-bordered .ant-list-item {
+  padding: 12px 10px;
+}
