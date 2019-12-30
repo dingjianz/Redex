@@ -1,6 +1,6 @@
 // reducer 必须是纯函数，返回的结果只能由参数决定，参数相同，则结果必定相同。
 
-import {CHANGE_IPT_VAL, ADD_ITEM, DELETE_ITEM} from './action/main'
+import { CHANGE_IPT_VAL, ADD_ITEM, DELETE_ITEM, GET_LIST } from './action/main'
 const defaultState = {
   inputValue:'',
   list: [
@@ -28,6 +28,13 @@ export default (state = defaultState, action) => {
   if (action.type===DELETE_ITEM) {
     let newState = JSON.parse(JSON.stringify(state))
     newState.list.splice(action.index,1)
+    newState.inputValue = ''
+    return newState
+  }
+
+  if (action.type===GET_LIST) {
+    let newState = JSON.parse(JSON.stringify(state))
+    newState.list = action.data
     newState.inputValue = ''
     return newState
   }

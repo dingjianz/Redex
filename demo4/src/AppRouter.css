@@ -1,0 +1,48 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.mainDiv {
+  display: flex;
+  width: 100%;
+}
+
+.leftNav {
+  width: 16%;
+  background-color: #c0c0c0;
+  color: #333;
+  font-size: 24px;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rightMain {
+  width: 84%;
+  height: 100vh;
+  background-color: #fff;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.topNav {
+  height: 50px;
+  background-color: #cfdefd;
+}
+
+.topNav ul {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+.topNav li {
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+}
+
+.videoContent {
+  padding: 20px;
+}

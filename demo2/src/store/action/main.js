@@ -10,16 +10,6 @@ export const changeIptValAction = (value) => ({
   value
 })
 
-export const addItemAction = (value) => ({
-  type: ADD_ITEM
-})
-
-export const deleteItemAction = (index) => ({
-  type: DELETE_ITEM,
-  index
-})
-
-
 export const getTodoList = () => {
   return (dispatch) => {
     axios.get('https://www.easy-mock.com/mock/5cfcce489dc7c36bd6da2c99/xiaojiejie/getList').then((res) => {

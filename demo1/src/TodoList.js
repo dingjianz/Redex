@@ -3,7 +3,7 @@ import store from './store'
 
 import TodoListUI from './TodoListUI'
 
-import { changeIptValAction, addItemAction, deleteItemAction} from './store/action/main'
+import { changeIptValAction, addItemAction, deleteItemAction, getTodoList } from './store/action/main'
 
 
 class TodoList extends React.Component {
@@ -27,6 +27,10 @@ class TodoList extends React.Component {
     )
   }
 
+
+componentDidMount(){
+  store.dispatch(getTodoList())
+}
   changeIptVal = (e) => {
     const action = changeIptValAction(e.target.value)
     store.dispatch(action)
